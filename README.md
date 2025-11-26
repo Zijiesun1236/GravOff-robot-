@@ -5,7 +5,7 @@ This repository presents the code for "parabolic trajectory regulation" in matla
 ## Prerequisites
 ### Parabolic trajectory regulation
   1. Ensure you have Matlab installed (the code was tested under 2019b).
-  2. Motion capture system will be needed (this project uses luster motion capture system). If you use the same mocap system, change the ip address in the .m file. Note the orientation setting in the mocap system, different settings would causes reversed control reactions and divergence from the reference trajectory.
+  2. Motion capture system will be needed (this project uses luster motion capture system). If you use the same mocap system, change the ip address in the .m file. Be aware of the orientation setting in the mocap system, different settings would causes reversed control reactions and divergence from the reference trajectory.
 
 ### low-level control code 
   1. The low-level control of GravOff robot is implemented in Teensy 4.0. Ensure the right hardware is used, teensy 3.5 or 4.1 should also work but pin connections for actuators and sensors need to be redifined. ESP32-S3 support most of the libraries used in this project and should also work, certain libraries may need to be replaced with ESP32 compatible ones. Specifically, servo.h need to be replaced with EPS32Servo.h, and replace TeensyPWM library with library like ESP32_FastPWM (https://github.com/khoih-prog/ESP32_FastPWM).
